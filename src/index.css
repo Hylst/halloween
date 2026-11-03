@@ -34,3 +34,92 @@
   font-family: var(--font-title);
   letter-spacing: 0.05em;
 }
+
+/* Animations gothiques Halloween */
+@keyframes witchFly {
+  0% {
+    transform: translate(-180%, 20px) rotate(-4deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate(220%, -30px) rotate(4deg);
+    opacity: 0;
+  }
+}
+
+.witch-flight {
+  animation: witchFly 18s ease-in-out infinite;
+}
+
+@keyframes batFly1 {
+  0% { transform: translate(-20vw, 0px) scaleX(1); }
+  50% { transform: translate(60vw, 40px) scaleX(1); }
+  51% { transform: translate(60vw, 40px) scaleX(-1); }
+  100% { transform: translate(-20vw, 0px) scaleX(-1); }
+}
+
+@keyframes batFly2 {
+  0% { transform: translate(110vw, 20px) scaleX(-1); }
+  50% { transform: translate(30vw, -30px) scaleX(-1); }
+  51% { transform: translate(30vw, -30px) scaleX(1); }
+  100% { transform: translate(110vw, 20px) scaleX(1); }
+}
+
+.bat-1 {
+  animation: batFly1 14s linear infinite;
+}
+
+.bat-2 {
+  animation: batFly2 19s linear infinite 3s;
+}
+
+.bat-3 {
+  animation: batFly1 23s linear infinite 8s;
+}
+
+@keyframes spiderBob1 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(45px); }
+}
+
+@keyframes spiderBob2 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(60px); }
+}
+
+.spider-bounce-1 {
+  animation: spiderBob1 6s ease-in-out infinite;
+}
+
+.spider-bounce-2 {
+  animation: spiderBob2 7.5s ease-in-out infinite 1.5s;
+}
+
+@keyframes pumpkinHop {
+  0%, 100% {
+    transform: translateY(0) scale(1, 1);
+  }
+  40% {
+    transform: translateY(-16px) scale(0.95, 1.05);
+  }
+  50% {
+    transform: translateY(0) scale(1.08, 0.92);
+  }
+  60% {
+    transform: translateY(0) scale(1, 1);
+  }
+}
+
+.pumpkin-bounce {
+  animation: pumpkinHop 3.5s ease-in-out infinite;
+}
+
+.pumpkin-bounce-delayed {
+  animation: pumpkinHop 3.8s ease-in-out infinite 1.8s;
+}
