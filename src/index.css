@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Cinzel Decorative', Georgia, serif;
+    --font-title: 'Creepster', cursive, fantasy;
+    --font-body: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100dvh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #07040d;
+    color: #f1f5f9;
+    font-family: var(--font-body);
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-creep {
+  font-family: var(--font-title);
+  letter-spacing: 0.05em;
+}
