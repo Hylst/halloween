@@ -3,22 +3,192 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>L Antre d Halloween : Le Grimoire de Minuit</title>
-    <meta name="description" content="L Antre d Halloween : launcher gothique immersif regroupant 8 mini-jeux d arcade, de survie et d énigmes dans une ambiance nocturne envoûtante." />
-    <meta name="keywords" content="halloween, jeux halloween, launcher, grimoire, gothique, arcade, survie, escape game, mini-jeux, hylst, jeux gratuits, jeux en ligne" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="L Antre d Halloween : Le Grimoire de Minuit" />
-    <meta property="og:description" content="Launcher gothique immersif regroupant 8 mini-jeux d arcade, de survie et d énigmes dans une ambiance nocturne envoûtante." />
-    <meta property="og:image" content="https://games.hylst.fr/halloween/og-image.png" />
-    <meta property="og:url" content="https://games.hylst.fr/halloween/" />
-    <meta property="og:site_name" content="Hylst.Games" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="L Antre d Halloween : Le Grimoire de Minuit" />
-    <meta name="twitter:description" content="Launcher gothique immersif regroupant 8 mini-jeux d arcade, de survie et d énigmes." />
-    <meta name="twitter:image" content="https://games.hylst.fr/halloween/og-image.png" />
+    <title>Jeux Halloween Gratuits en Ligne · Le Grimoire de Minuit | Hylst.Games</title>
+    <meta name="description" content="L Antre d Halloween (Le Grimoire de Minuit) : compilation de 8 mini-jeux d Halloween gratuits en ligne. Arcade rétro, survie dans le cimetière, escape game au manoir hanté et bonbons ensorcelés. 100% frontend autonome sans pub ni téléchargement." />
+    <meta name="keywords" content="jeux halloween, jeux halloween gratuits, jeux en ligne halloween, mini jeux halloween, arcade halloween, manoir hante, cimetiere hante, escape game halloween, jeux gratuits en ligne, jeux sans telechargement, hylst games, jeux retro halloween" />
+    <meta name="author" content="Geoffroy Streit (Hylst)" />
+    <meta name="theme-color" content="#07040d" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://games.hylst.fr/halloween/" />
-    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Favicon multi-formats -->
+    <link rel="icon" type="image/svg+xml" href="/halloween/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/halloween/favicon.png" />
+    <link rel="shortcut icon" href="/halloween/favicon.ico" />
+    <link rel="apple-touch-icon" href="/halloween/icon.webp" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Hylst.Games" />
+    <meta property="og:title" content="Jeux Halloween Gratuits en Ligne · Le Grimoire de Minuit" />
+    <meta property="og:description" content="Compilation gothique immersive de 8 mini-jeux d arcade, de survie et d énigmes d Halloween jouables directement dans le navigateur." />
+    <meta property="og:url" content="https://games.hylst.fr/halloween/" />
+    <meta property="og:image" content="https://games.hylst.fr/halloween/og-image.png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="576" />
+    <meta property="og:image:alt" content="L Antre d Halloween - Le Grimoire de Minuit" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jeux Halloween Gratuits en Ligne · Le Grimoire de Minuit" />
+    <meta name="twitter:description" content="Compilation gothique de 8 mini-jeux d Halloween gratuits : arcade rétro, survie zombies et énigmes du manoir hanté." />
+    <meta name="twitter:image" content="https://games.hylst.fr/halloween/og-image.png" />
+
+    <!-- Schema.org Données Structurées JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://games.hylst.fr/halloween/#app",
+          "name": "L Antre d Halloween : Le Grimoire de Minuit",
+          "alternateName": "Compilation 8 Jeux Halloween Hylst.Games",
+          "url": "https://games.hylst.fr/halloween/",
+          "description": "Launcher gothique immersif et compilation de 8 mini-jeux d arcade, de survie et d énigmes d Halloween en ligne gratuits.",
+          "applicationCategory": "GameApplication",
+          "operatingSystem": "All (Navigateur Web)",
+          "browserRequirements": "HTML5, Web Audio API, Canvas 2D",
+          "inLanguage": "fr-FR",
+          "genre": ["Halloween", "Arcade", "Survie", "Escape Game", "Rétro"],
+          "image": "https://games.hylst.fr/halloween/og-image.png",
+          "screenshot": "https://games.hylst.fr/halloween/og-image.png",
+          "author": {
+            "@type": "Person",
+            "name": "Geoffroy Streit",
+            "alternateName": "Hylst",
+            "url": "https://games.hylst.fr/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Hylst.Games",
+            "url": "https://games.hylst.fr/"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://games.hylst.fr/halloween/#games",
+          "name": "Les 8 Jeux d Halloween du Grimoire de Minuit",
+          "description": "Sélection des 8 mini-jeux thématiques d Halloween jouables directement dans le navigateur",
+          "numberOfItems": 8,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "VideoGame",
+                "name": "Chasse aux Bonbons",
+                "url": "https://games.hylst.fr/chassebonbons/",
+                "description": "Plateforme arcade rétro verticale : grimpez de branche en pierre tombale pour récolter les friandises maudites en évitant les chauves-souris.",
+                "genre": ["Arcade", "Plateforme", "Halloween"],
+                "playMode": "SinglePlayer",
+                "gamePlatform": "Web Browser"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "VideoGame",
+                "name": "Sac de Bonbons",
+                "url": "https://games.hylst.fr/sacdebonbons/",
+                "description": "Collecte et esquive frénétique : attrapez les sucreries tombant du ciel nocturne et esquivez les citrouilles explosives.",
+                "genre": ["Arcade", "Action", "Halloween"],
+                "playMode": "SinglePlayer",
+                "gamePlatform": "Web Browser"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "VideoGame",
+                "name": "Cimetière au Clair de Lune",
+                "url": "https://games.hylst.fr/cimetiereclair/",
+                "description": "Survie tactique top-down : repoussez les vagues de squelettes et de goules errantes dans la brume d un cimetière gothique.",
+                "genre": ["Survie", "Action", "Halloween"],
+                "playMode": "SinglePlayer",
+                "gamePlatform": "Web Browser"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "VideoGame",
+                "name": "Cimetière Ardent",
+                "url": "https://games.hylst.fr/cimetiereardent/",
+                "description": "Arène de survie cauchemar : esquivez le feu infernal et survivez aux apparitions spectrales déchaînées.",
+                "genre": ["Survie", "Arcade", "Halloween"],
+                "playMode": "SinglePlayer",
+                "gamePlatform": "Web Browser"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "VideoGame",
+                "name": "Le Manoir de Val-Ombre",
+                "url": "https://games.hylst.fr/manoirvalombre/",
+                "description": "Escape room et énigmes gothiques : explorez les salles secrètes, trouvez les clés occultes et brisez la malédiction du manoir.",
+                "genre": ["Escape Game", "Puzzle", "Halloween"],
+                "playMode": "SinglePlayer",
+                "gamePlatform": "Web Browser"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "VideoGame",
+                "name": "La Lanterne et la Courge",
+                "url": "https://games.hylst.fr/lanternecourge/",
+                "description": "Exploration et réflexion dans l obscurité : éclairez les couloirs hantés avec votre lanterne magique et résolvez les mystères anciens.",
+                "genre": ["Puzzle", "Aventure", "Halloween"],
+                "playMode": "SinglePlayer",
+                "gamePlatform": "Web Browser"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "item": {
+                "@type": "VideoGame",
+                "name": "Bonbons & Monstres",
+                "url": "https://games.hylst.fr/bonbonsmonstres/",
+                "description": "Distribution rapide et réflexes : donnez la friandise exacte réclamée par chaque créature avant qu elle ne s impatiente.",
+                "genre": ["Arcade", "Réflexes", "Halloween"],
+                "playMode": "SinglePlayer",
+                "gamePlatform": "Web Browser"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "item": {
+                "@type": "VideoGame",
+                "name": "Confiserie de Minuit",
+                "url": "https://games.hylst.fr/confiserieminuit/",
+                "description": "Simulation et gestion de boutique magique : concoctez des recettes ensorcelées et servez les clients monstres.",
+                "genre": ["Simulation", "Gestion", "Halloween"],
+                "playMode": "SinglePlayer",
+                "gamePlatform": "Web Browser"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Polices Google Fonts Gothiques -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400&family=Creepster&display=swap" rel="stylesheet" />
