@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export type InfoModalTab = 'tech' | 'privacy' | 'aiact';
 
@@ -10,6 +10,7 @@ interface InfoModalProps {
 
 export const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onClose, initialTab = 'tech' }) => {
   const [activeTab, setActiveTab] = useState<InfoModalTab>(initialTab);
+  const closeBtnRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     if (isOpen) {
@@ -17,10 +18,29 @@ export const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onClose, initialTa
     }
   }, [isOpen, initialTab]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    closeBtnRef.current?.focus();
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[110] flex items-center justify-center bg-black/85 p-3 sm:p-4 backdrop-blur-md select-none">
+    <div
+      className="fixed inset-0 z-[110] flex items-center justify-center bg-black/85 p-3 sm:p-4 backdrop-blur-md select-none"
+      onMouseDown={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+    >
       <div className="flex max-h-[92vh] w-full max-w-2xl flex-col overflow-hidden rounded-2xl border border-purple-500/40 bg-slate-900 shadow-2xl shadow-purple-500/10">
         {/* Entete modale */}
         <div className="flex items-center justify-between border-b border-slate-800 bg-slate-950 p-4 sm:p-5 text-white">
@@ -33,6 +53,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onClose, initialTa
             </h2>
           </div>
           <button
+            ref={closeBtnRef}
             onClick={onClose}
             className="rounded-lg bg-slate-800 p-2 text-slate-400 hover:bg-slate-700 hover:text-white transition cursor-pointer"
             aria-label="Fermer"
