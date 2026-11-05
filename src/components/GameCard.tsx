@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { GameEntry } from '../types';
 import { playHoverSfx, playLaunchSfx } from '../utils/audio';
 
@@ -7,9 +7,14 @@ interface GameCardProps {
 }
 
 export const GameCard: React.FC<GameCardProps> = ({ game }) => {
+  const [isLaunching, setIsLaunching] = useState(false);
+  const cardRef = useRef<HTMLElement | null>(null);
+
   const handleLaunch = () => {
     if (game.isTeaser) return;
     playLaunchSfx();
+    setIsLaunching(true);
+    window.setTimeout(() => setIsLaunching(false), 700);
   };
 
   if (game.isTeaser) {
@@ -66,9 +71,12 @@ export const GameCard: React.FC<GameCardProps> = ({ game }) => {
 
   return (
     <article
+      ref={cardRef}
       onMouseEnter={playHoverSfx}
-      className="group relative flex flex-col overflow-hidden rounded-2xl border bg-gradient-to-b from-slate-900/90 to-[#0e071c]/95 p-4 sm:p-5 shadow-2xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_12px_35px_rgba(0,0,0,0.6)]"
-      style={{ borderColor: game.borderColor }}
+      className={`group relative flex flex-col overflow-hidden rounded-2xl border bg-gradient-to-b from-slate-900/90 to-[#0e071c]/95 p-4 sm:p-5 shadow-2xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_12px_35px_rgba(0,0,0,0.6)] ${
+        isLaunching ? 'card-launching' : ''
+      }`}
+      style={{ borderColor: isLaunching ? '#fbbf24' : game.borderColor }}
     >
       {/* Halo de lueur diffuse en arriere-plan au survol */}
       <div
@@ -140,9 +148,11 @@ export const GameCard: React.FC<GameCardProps> = ({ game }) => {
           ))}
         </div>
 
-        {/* Bouton de lancement */}
+        {/* Bouton de lancement : le jeu s'ouvre dans un nouvel onglet, la carte reste en place */}
         <a
           href={`/${game.slug}/`}
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={handleLaunch}
           className="group/btn relative w-full py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm text-white text-center transition-all duration-200 shadow-lg flex items-center justify-center gap-2 overflow-hidden select-none"
           style={{
