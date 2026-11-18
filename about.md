@@ -18,5 +18,5 @@ Ce launcher fonctionne comme un sous-menu secret et immersif pour la plateforme 
 - 100% statique, sans serveur ni collecte de donnees
 
 ## Contact
-- Email : geoffroy.streit@gmail.com
+- Email : geoffroy.streit@ik.me
 - Plateforme : https://games.hylst.fr/
