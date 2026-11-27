@@ -117,7 +117,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInfo }) => {
 
       <div className="mt-3 flex items-center justify-center gap-2 text-xs text-slate-400 font-mono">
         <span className="w-8 h-px bg-gradient-to-r from-transparent to-amber-500/50" />
-        <span>100% FRONTEND · ZERO TRACKER · SANS SERVEUR</span>
+        <span>100% STATIQUE · SANS TRACEUR PUBLICITAIRE · SANS BACK-END</span>
         <span className="w-8 h-px bg-gradient-to-l from-transparent to-amber-500/50" />
       </div>
     </header>

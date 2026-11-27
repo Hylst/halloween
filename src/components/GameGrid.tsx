@@ -1,6 +1,6 @@
 import React from 'react';
 import { GameCategory } from '../types';
-import { GAMES_DATA, NARRATIVE_TEASER } from '../data/gamesData';
+import { GAMES_DATA } from '../data/gamesData';
 import { GameCard } from './GameCard';
 
 interface GameGridProps {
@@ -19,10 +19,6 @@ export const GameGrid: React.FC<GameGridProps> = ({ activeCategory }) => {
           <GameCard key={game.id} game={game} />
         ))}
 
-        {/* Teaser des recits narratifs (affiche dans la vue globale) */}
-        {activeCategory === 'all' && (
-          <GameCard game={NARRATIVE_TEASER} />
-        )}
       </div>
     </main>
   );

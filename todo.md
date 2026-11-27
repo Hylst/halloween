@@ -11,3 +11,7 @@
 ## Idees futures
 - [ ] Branchement effectif des livres interactifs une fois adaptes
 - [ ] Mode eclair / pluie battante optionnel
+
+## Audit du 27/11/2026
+
+- [ ] Décider si les deux récits narratifs doivent avoir deux cartes actives dans le lanceur, ou rester sur le portail.

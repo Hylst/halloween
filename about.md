@@ -15,7 +15,7 @@ Ce launcher fonctionne comme un sous-menu secret et immersif pour la plateforme 
 - Vite 7 + vite-plugin-singlefile
 - Web Audio API (zero fichier audio externe charge)
 - Canvas 2D adaptatif
-- 100% statique, sans serveur ni collecte de donnees
+- 100% statique, sans back-end ni collecte de données
 
 ## Contact
 - Email : geoffroy.streit@ik.me

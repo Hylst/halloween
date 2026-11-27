@@ -127,7 +127,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onClose, initialTa
           {activeTab === 'privacy' && (
             <div className="space-y-3.5">
               <div className="p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-200 text-xs">
-                <strong>Garantie de confidentialité intégrale :</strong> Ce launcher et l ensemble des 8 jeux d Halloween respectent scrupuleusement le Règlement Général sur la Protection des Données (RGPD - Règlement UE 2016/679).
+                <strong>Confidentialité :</strong> Ce launcher et l ensemble des 8 jeux d Halloween respectent scrupuleusement le Règlement Général sur la Protection des Données (RGPD - Règlement UE 2016/679).
               </div>
               <p>
                 <strong className="text-emerald-400">Zéro collecte de données personnelles :</strong> Aucun compte utilisateur n est requis, aucune inscription, aucun formulaire, aucun identifiant, aucune adresse IP n est collectée ni stockée sur un quelconque serveur.
